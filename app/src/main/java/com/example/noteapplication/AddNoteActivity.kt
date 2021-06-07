@@ -14,11 +14,11 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 
-class AddNoteActivity : AppCompatActivity(), View.OnClickListener,CoroutineScope {
+class AddNoteActivity : AppCompatActivity(), View.OnClickListener, CoroutineScope {
     var note: Notes? = null
     private lateinit var job: Job
-   private var mTitle: String? = null
-   private var mDescription: String? = null
+    private var mTitle: String? = null
+    private var mDescription: String? = null
 
 
     override val coroutineContext: CoroutineContext
@@ -76,14 +76,13 @@ class AddNoteActivity : AppCompatActivity(), View.OnClickListener,CoroutineScope
                     val mNote = Notes(stringTitle, stringDesc)
 
                     applicationContext?.let {
-                            AppDatabase(it).getNoteDao().addNote(mNote)
-                           // println("note created" + AppDatabase(it).getNoteDao().addNote(mNote))
-                            Toast.makeText(this@AddNoteActivity, "note Saved", Toast.LENGTH_SHORT)
-                                .show()
+                        AppDatabase(it).getNoteDao().addNote(mNote)
+                        Toast.makeText(this@AddNoteActivity, "note Saved", Toast.LENGTH_SHORT)
+                            .show()
                     }
 
                 }
-                val intent = Intent(applicationContext,MainActivity::class.java)
+                val intent = Intent(applicationContext, MainActivity::class.java)
                 startActivity(intent)
             }
 
