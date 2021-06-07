@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".AddNoteActivity">
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_chevron"/>
+
+        <Button
+            android:layout_alignParentEnd="true"
+            android:id="@+id/saveNote"
+            android:textAllCaps="false"
+            android:layout_marginRight="40dp"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:background="@drawable/button_corner"
+            android:text="Save"
+            android:backgroundTint="@color/coral"
+            android:textColor="@color/white_color"
+            android:layout_gravity="center"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/noteTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:background="@null"
+        android:inputType="text"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="35sp"
+        android:paddingLeft="15dp"
+        android:hint="Title" />
+
+    <EditText
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/noteDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:background="@null"
+        android:hint="Description"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:paddingLeft="15dp"
+        />
+
+<!--    -->
+<!--    <TextView-->
+<!--        android:id="@+id/date_text"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="13dp"-->
+<!--        android:text="date"/>-->
+
+
+</LinearLayout>
